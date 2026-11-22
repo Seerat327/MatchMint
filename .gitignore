@@ -1,0 +1,5 @@
+*.class
+Backend/out/
+.vscode/
+.env
+*.env

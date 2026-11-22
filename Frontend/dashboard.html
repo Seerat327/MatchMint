@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | MatchMint</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a href="index.html" class="logo">match<span>mint.</span> 🍋</a>
+
+            <p class="menu-label">MENU</p>
+
+            <a href="dashboard.html" class="side-link active">⌂ &nbsp; Overview</a>
+            <a href="#resume" class="side-link">📄 &nbsp; Resume Analyzer</a>
+            <a href="#matches" class="side-link">💼 &nbsp; Job Matches</a>
+            <a href="#skills" class="side-link">🌱 &nbsp; Skill Gaps</a>
+
+            <div class="sidebar-bottom">
+                <div class="side-note">
+                    <span>✨</span>
+                    <h3>Your next chapter awaits.</h3>
+                    <p>Keep growing. Keep matching.</p>
+                </div>
+
+                <a href="index.html" class="side-link">↩ &nbsp; Back to website</a>
+
+                <button type="button" id="logoutButton" class="side-link logout-button">
+                    ↪ &nbsp; Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL CAREER SPACE</p>
+                    <h2>Dashboard <span>✦</span></h2>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar" id="profileAvatar">S</div>
+                    <div>
+                        <strong id="dashboardUserName">Student</strong>
+                        <p>Career explorer</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- WELCOME -->
+            <section class="welcome-card">
+                <div>
+                    <p class="welcome-tag">YOUR CAREER JOURNEY STARTS HERE ✨</p>
+
+                    <h1>
+                        Hey, <span id="welcomeUserName">future superstar!</span>
+                    </h1>
+
+                    <p>Your dream career called. It wants you to get started.</p>
+
+                    <a href="#resume" class="welcome-button">
+                        Analyse my resume ↗
+                    </a>
+                </div>
+
+                <div class="welcome-emoji">🚀</div>
+            </section>
+
+            <!-- STATS -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon pink">📄</div>
+                    <p>Resume score</p>
+                    <h2>
+                        <span id="resumeScoreValue">--</span><small>/100</small>
+                    </h2>
+                    <span>Upload a resume to begin</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">💼</div>
+                    <p>Job matches</p>
+                    <h2 id="jobMatchesValue">--</h2>
+                    <span>Your matches will appear here</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon yellow">🌱</div>
+                    <p>Skills identified</p>
+                    <h2 id="skillsCountValue">--</h2>
+                    <span>Discover your strengths</span>
+                </div>
+
+            </section>
+
+            <!-- RESUME UPLOAD -->
+            <section class="content-card upload-section" id="resume">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">LET'S GET STARTED</p>
+                        <h2>Your resume deserves a glow-up.</h2>
+                    </div>
+
+                    <span class="sparkle">✦</span>
+                </div>
+
+                <div class="upload-box">
+                    <div class="upload-icon">📂</div>
+
+                    <h3>Drop your resume here</h3>
+
+                    <p>PDF, DOC or DOCX · Maximum 5 MB</p>
+
+                    <input
+                        type="file"
+                        id="resumeFile"
+                        accept=".pdf,.doc,.docx"
+                        hidden
+                    >
+
+                    <button class="upload-button" id="uploadButton">
+                        Choose my resume ↑
+                    </button>
+
+                    <p id="fileMessage" class="file-message">
+                        Your career glow-up starts with one upload.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- RESUME ANALYSIS RESULTS -->
+            <section
+                class="content-card analysis-results-section"
+                id="analysisResults"
+                hidden
+            >
+            </section>
+
+            <!-- JOB MATCHES AND SKILLS -->
+            <section class="lower-grid">
+
+                <div class="content-card" id="matches">
+                    <p class="eyebrow">YOUR NEXT OPPORTUNITY</p>
+                    <h2>Job matches 💼</h2>
+
+                    <div class="empty-state">
+                        <span>🔎</span>
+                        <h3>Your perfect match is out there.</h3>
+                        <p>Upload your resume to discover relevant jobs.</p>
+                    </div>
+                </div>
+
+                <div class="content-card" id="skills">
+                    <p class="eyebrow">LEVEL UP YOURSELF</p>
+                    <h2>Skill gaps 🌱</h2>
+
+                    <div class="empty-state">
+                        <span>🪴</span>
+                        <h3>Room to grow?</h3>
+                        <p>
+                            We'll identify skills you can improve
+                            after analysing your resume.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                Made with 💜 by MatchMint · Find your match. Build your future.
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

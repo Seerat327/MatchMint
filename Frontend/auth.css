@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff9ed;
+    color: #321d3d;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+.auth-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 7%;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    color: #321d3d;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #f07863;
+}
+
+.nav-link {
+    color: #321d3d;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.auth-container {
+    max-width: 1150px;
+    margin: 45px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.auth-left h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(45px, 6vw, 72px);
+    line-height: 1.05;
+    margin: 20px 0;
+    letter-spacing: -3px;
+}
+
+.auth-left h1 span {
+    color: #ed7965;
+}
+
+.eyebrow {
+    color: #8b6c99;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.description {
+    max-width: 410px;
+    color: #786b7d;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.floating-note {
+    display: inline-block;
+    background: #d9f28c;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    margin-top: 35px;
+    transform: rotate(-4deg);
+}
+
+.floating-note.second {
+    display: table;
+    background: #f9c6bd;
+    margin-top: 25px;
+    margin-left: 70px;
+    transform: rotate(4deg);
+}
+
+.auth-card {
+    background: white;
+    border: 2px solid #eadfeb;
+    border-radius: 28px;
+    padding: 38px;
+    box-shadow: 10px 10px 0 #e8d9e9;
+}
+
+.card-icon {
+    background: #f8e9b7;
+    width: 55px;
+    height: 55px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.auth-card h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+}
+
+.card-subtitle {
+    color: #928497;
+    margin: 8px 0 25px;
+    font-size: 14px;
+}
+
+.auth-card label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 17px 0 8px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #e8dce9;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    background: #fffcf8;
+}
+
+.auth-card input:focus {
+    border-color: #a47ab1;
+    box-shadow: 0 0 0 3px #f1e7f3;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 65px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #956da2;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 13px;
+    background: #3b2347;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-button:hover {
+    background: #ed7965;
+    transform: translateY(-3px);
+}
+
+.switch-text {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 25px;
+    color: #84758a;
+}
+
+.switch-text a {
+    color: #ed7965;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.message {
+    font-size: 13px;
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 15px;
+    }
+
+    .auth-left {
+        text-align: center;
+    }
+
+    .description {
+        margin: auto;
+    }
+
+    .floating-note.second {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-nav {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .auth-card {
+        padding: 25px;
+    }
+}
